@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "api/main.py",
+            "use": "@vercel/python",
+            "config": {
+                "install.command": "pip install --no-cache-dir -r requirements.txt",
+                "memory": 2048
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "api/main.py"
+        }
+    ],
+    "env": {
+        "TRANSFORMERS_CACHE": "/tmp"
+    }
+}

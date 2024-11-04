@@ -1,5 +1,6 @@
 fastapi
 uvicorn
+pydantic
 transformers==4.46.1
 torch==2.5.1
 tokenizers==0.20.1
